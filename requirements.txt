@@ -1,16 +1,13 @@
-contourpy==1.2.0
-cycler==0.12.1
-fonttools==4.50.0
-importlib_resources==6.3.1
-kiwisolver==1.4.5
-matplotlib==3.8.3
-numpy==1.26.4
-packaging==24.0
-pandas==2.2.1
-pillow==10.2.0
-pyparsing==3.1.2
-python-dateutil==2.9.0.post0
-pytz==2024.1
-six==1.16.0
-tzdata==2024.1
-zipp==3.18.1
+altgraph @ file:///AppleInternal/Library/BuildRoots/860631e9-c1c5-11ee-98ee-b6ef2fd8d87b/Library/Caches/com.apple.xbs/Sources/python3/altgraph-0.17.2-py2.py3-none-any.whl
+astroid==3.1.0
+dill==0.3.8
+future @ file:///AppleInternal/Library/BuildRoots/860631e9-c1c5-11ee-98ee-b6ef2fd8d87b/Library/Caches/com.apple.xbs/Sources/python3/future-0.18.2-py3-none-any.whl
+isort==5.13.2
+macholib @ file:///AppleInternal/Library/BuildRoots/860631e9-c1c5-11ee-98ee-b6ef2fd8d87b/Library/Caches/com.apple.xbs/Sources/python3/macholib-1.15.2-py2.py3-none-any.whl
+mccabe==0.7.0
+platformdirs==4.2.0
+pylint==3.1.0
+six @ file:///AppleInternal/Library/BuildRoots/860631e9-c1c5-11ee-98ee-b6ef2fd8d87b/Library/Caches/com.apple.xbs/Sources/python3/six-1.15.0-py2.py3-none-any.whl
+tomli==2.0.1
+tomlkit==0.12.4
+typing_extensions==4.10.0

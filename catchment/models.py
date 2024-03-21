@@ -35,6 +35,26 @@ def read_variable_from_csv(filename):
 
     return newdataset
 
+def read_variable_from_xml(filename):
+    """Reads a XML file and returns a pandas dataframe"""
+    with open(filename) as file:
+        dataset = pd.read_xml(file)     
+    dataset = dataset.rename({'Date':'OldDate', 'Site_Name': 'Site Name', 'Rainfall_mm': 'Rainfall (mm)'}, 
+                             axis='columns')
+    dataset['Date'] = [pd.to_datetime(x,dayfirst=True) for x in dataset['OldDate']]
+    dataset = dataset.drop('OldDate', axis='columns')
+
+    newdataset = pd.DataFrame(index=dataset['Date'].unique())
+
+    for site in dataset['Site'].unique():
+        newdataset[site] = dataset[dataset['Site'] == site].set_index('Date')["Rainfall (mm)"]
+
+    newdataset = newdataset.sort_index()
+
+    return newdataset   
+          
+        
+        
 def daily_total(data):
     """Calculate the daily total of a 2d data array.
     Index must be np.datetime64 compatible format."""
